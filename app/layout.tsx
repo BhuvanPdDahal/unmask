@@ -43,6 +43,12 @@ export default async function RootLayout({
         <html lang="en">
             <head>
                 <PlausibleProvider domain={domain} />
+                <script
+                    defer
+                    data-website-id={process.env.METRIK_WEBSITE_ID}
+                    data-domain={new URL(baseUrl).host}
+                    src="https://metrik-one.vercel.app/js/script.js"
+                ></script>
             </head>
             <body className={plusJakartaSans.className}>
                 <ThemeProvider
